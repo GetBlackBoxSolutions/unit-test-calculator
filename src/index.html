@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f5f5f5;
+      }
+
+      .calculator {
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        width: 320px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #display {
+        width: 98%;
+        display: flex;
+        align-items: center;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 15px;
+      }
+
+      #current-operator {
+        font-size: 32px;
+        margin-left: 10px;
+      }
+
+      .calculator input[type="text"] {
+        background-color: transparent;
+        width: 85%;
+        font-size: 32px;
+        outline: none;
+        border: none;
+        text-align: right;
+      }
+
+      .calculator .buttons {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+      }
+
+      .calculator .button {
+        padding: 15px;
+        font-size: 24px;
+        background-color: #e0e0e0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+      }
+
+      .calculator .button:hover {
+        background-color: #ccc;
+      }
+
+      .result {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <div id="display">
+        <input type="text" id="number-input" disabled />
+        <div id="current-operator"></div>
+      </div>
+
+      <div class="buttons">
+        <div class="button btn-number">7</div>
+        <div class="button btn-number">8</div>
+        <div class="button btn-number">9</div>
+        <div class="button btn-operator">+</div>
+        <div class="button btn-number">4</div>
+        <div class="button btn-number">5</div>
+        <div class="button btn-number">6</div>
+        <div class="button btn-operator">-</div>
+        <div class="button btn-number">1</div>
+        <div class="button btn-number">2</div>
+        <div class="button btn-number">3</div>
+        <div class="button btn-operator">*</div>
+        <div id="clear" class="button">C</div>
+        <div class="button btn-number">0</div>
+        <div class="button btn-operator">/</div>
+        <div id="calculate" class="button">=</div>
+      </div>
+    </div>
+  </body>
+</html>
