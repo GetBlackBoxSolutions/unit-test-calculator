@@ -65,23 +65,8 @@ calculateElement.addEventListener("click", function () {
     tempNumberTwo = Number(numberTwo);
   }
 
-  switch (currentOperator) {
-    case "+":
-      total = tempNumberOne + tempNumberTwo;
-      break;
-    case "-":
-      total = tempNumberOne - tempNumberTwo;
-      break;
-    case "*":
-      total = tempNumberOne * tempNumberTwo;
-      break;
-    case "/":
-      total = tempNumberOne / tempNumberTwo;
-      break;
-    default:
-      total = 0;
-      break;
-  }
+  // TODO: Add logic to calculate the total based on the current operator
+  console.log(tempNumberOne, tempNumberTwo, currentOperator);
 
   numberInputElement.value = total.toString();
 });
