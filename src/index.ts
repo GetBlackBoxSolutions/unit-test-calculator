@@ -1,7 +1,3 @@
-// Set variables to hold the current operator and the display element
-let numberOne = "";
-let numberTwo = "";
-
 // Get Elements
 const numberElements = document?.getElementsByClassName(
   "btn-number"
@@ -23,6 +19,10 @@ const clearElement = document?.getElementById("clear") as HTMLInputElement;
 // Default input to 0
 numberInputElement.value = "0";
 
+// Set variables to hold the current operator and the display element
+let numberOne = "";
+let numberTwo = "";
+
 // Add event listeners to all number buttons
 for (let i = 0; i < numberElements.length; i++) {
   numberElements[i].addEventListener("click", function () {
@@ -40,6 +40,14 @@ for (let i = 0; i < operatorElements.length; i++) {
     numberTwo = "";
   });
 }
+
+// Add event listener to the clear button that clears the display
+clearElement.addEventListener("click", function () {
+  numberInputElement.value = "0";
+  numberOne = "";
+  numberTwo = "";
+  currentOperatorElement.innerHTML = "";
+});
 
 // Add event listener to the calculate button that console logs the current number
 calculateElement.addEventListener("click", function () {
@@ -76,12 +84,4 @@ calculateElement.addEventListener("click", function () {
   }
 
   numberInputElement.value = total.toString();
-});
-
-// Add event listener to the clear button that clears the display
-clearElement.addEventListener("click", function () {
-  numberInputElement.value = "0";
-  numberOne = "";
-  numberTwo = "";
-  currentOperatorElement.innerHTML = "";
 });
