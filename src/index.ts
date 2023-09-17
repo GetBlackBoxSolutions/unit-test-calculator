@@ -1,3 +1,5 @@
+import calculate from "./calculator/calculator";
+
 // Get Elements
 const numberElements = document?.getElementsByClassName(
   "btn-number"
@@ -52,21 +54,27 @@ clearElement.addEventListener("click", function () {
 // Add event listener to the calculate button that console logs the current number
 calculateElement.addEventListener("click", function () {
   const currentOperator = currentOperatorElement.innerHTML;
-  let total = 0;
   let tempNumberOne = 0;
   let tempNumberTwo = 0;
 
   if (numberTwo === "") {
     tempNumberOne = Number(numberOne);
     tempNumberTwo = Number(numberInputElement.value);
+    console.log(
+      `numberTwo === "": tempNumberOne ${tempNumberOne} tempNumberTwo ${tempNumberTwo}`
+    );
     numberTwo = numberInputElement.value;
   } else {
     tempNumberOne = Number(numberInputElement.value);
     tempNumberTwo = Number(numberTwo);
+    console.log(
+      `numberOne not empty: tempNumberOne ${tempNumberOne} tempNumberTwo ${tempNumberTwo}`
+    );
   }
 
   // TODO: Add logic to calculate the total based on the current operator
   console.log(tempNumberOne, tempNumberTwo, currentOperator);
+  const total = calculate(tempNumberOne, tempNumberTwo, currentOperator);
 
   numberInputElement.value = total.toString();
 });
