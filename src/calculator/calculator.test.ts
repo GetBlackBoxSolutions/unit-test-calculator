@@ -1,3 +1,5 @@
+import { expect } from "@jest/globals";
+
 import calculate, { sum, subtract, multiply, divide } from "./calculator";
 
 describe("my calculator", () => {
