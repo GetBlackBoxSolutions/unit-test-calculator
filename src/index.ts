@@ -60,16 +60,10 @@ calculateElement.addEventListener("click", function () {
   if (numberTwo === "") {
     tempNumberOne = Number(numberOne);
     tempNumberTwo = Number(numberInputElement.value);
-    console.log(
-      `numberTwo === "": tempNumberOne ${tempNumberOne} tempNumberTwo ${tempNumberTwo}`
-    );
     numberTwo = numberInputElement.value;
   } else {
     tempNumberOne = Number(numberInputElement.value);
     tempNumberTwo = Number(numberTwo);
-    console.log(
-      `numberOne not empty: tempNumberOne ${tempNumberOne} tempNumberTwo ${tempNumberTwo}`
-    );
   }
 
   // TODO: Add logic to calculate the total based on the current operator
