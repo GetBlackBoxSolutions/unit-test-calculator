@@ -52,7 +52,7 @@ clearElement.addEventListener("click", function () {
 // Add event listener to the calculate button that console logs the current number
 calculateElement.addEventListener("click", function () {
   const currentOperator = currentOperatorElement.innerHTML;
-  let total = 0;
+
   let tempNumberOne = 0;
   let tempNumberTwo = 0;
 
@@ -66,7 +66,7 @@ calculateElement.addEventListener("click", function () {
   }
 
   // TODO: Add logic to calculate the total based on the current operator
-  console.log(tempNumberOne, tempNumberTwo, currentOperator);
+  const total = 0;
 
   numberInputElement.value = total.toString();
 });
