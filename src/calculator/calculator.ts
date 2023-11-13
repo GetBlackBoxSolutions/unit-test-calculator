@@ -25,6 +25,7 @@ export default function calculate(
 
   switch (operator) {
     case "+":
+<<<<<<< Updated upstream
       return numOne + numTwo;
     case "-":
       return numOne - numTwo;
@@ -33,6 +34,15 @@ export default function calculate(
     case "/":
       if (numTwo === 0) return "Can not divide by 0";
       return numOne / numTwo;
+=======
+      return sum(numOne, numTwo);
+    case "-":
+      return subtract(numOne, numTwo);
+    case "*":
+      return multiply(numOne, numTwo);
+    case "/":
+      return divide(numOne, numTwo);
+>>>>>>> Stashed changes
     default:
       return "Invalid operator";
   }
